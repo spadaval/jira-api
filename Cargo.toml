@@ -1,5 +1,5 @@
 [package]
-name = "jira-api"
+name = "jira-cloud"
 version = "0.0.1"
 authors = ["spadavala@atlassian.com"]
 repository = "https://github.com/spadaval/jira-api"
