@@ -23,7 +23,7 @@ pub struct NotificationEvent {
     pub description: Option<String>,
     /// The template of the event. Only custom events configured by Jira administrators have template.
     #[serde(rename = "templateEvent", skip_serializing_if = "Option::is_none")]
-    pub template_event: Option<crate::models::NotificationEvent>,
+    pub template_event: Option<Box<crate::models::NotificationEvent>>,
 }
 
 impl NotificationEvent {
