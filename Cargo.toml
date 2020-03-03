@@ -3,6 +3,8 @@ name = "jira-api"
 version = "0.0.1"
 authors = ["spadavala@atlassian.com"]
 repository = "https://github.com/spadaval/jira-api"
+description = "Bindings for the Jira Cloud API."
+license = "MIT License"
 
 [dependencies]
 serde = "^1.0"
