@@ -494,13 +494,11 @@ impl APIClient {
 }
 
 mod tests {
-    use super::APIClient;
     use crate::apis::configuration::Configuration;
-    use std::fs;
     #[test]
     fn test_myself() {
         let mut secret =
-            fs::read_to_string("./apikey.secret").expect("API Key secret file not found");
+            std::fs::read_to_string("./apikey.secret").expect("API Key secret file not found");
         secret.pop();
         let username = "spadavala@atlassian.com".to_string();
 
@@ -509,7 +507,7 @@ mod tests {
         println!("{:?}", &auth);
         config.basic_auth = Some(auth);
 
-        let client = APIClient::new(config);
+        let client = super::APIClient::new(config);
         let myself = client.myself_api();
         let me = myself.get_current_user(None).unwrap();
 
