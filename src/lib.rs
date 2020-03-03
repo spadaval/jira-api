@@ -8,3 +8,6 @@ extern crate url;
 
 pub mod apis;
 pub mod models;
+
+pub use apis::client::APIClient;
+pub use apis::configuration::Configuration;
