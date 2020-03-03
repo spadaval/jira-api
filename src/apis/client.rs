@@ -494,9 +494,9 @@ impl APIClient {
 }
 
 mod tests {
-    use crate::apis::configuration::Configuration;
     #[test]
     fn test_myself() {
+        use crate::apis::configuration::Configuration;
         let mut secret =
             std::fs::read_to_string("./apikey.secret").expect("API Key secret file not found");
         secret.pop();
